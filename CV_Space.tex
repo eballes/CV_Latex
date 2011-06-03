@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper,twoside]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual} 
+\moderncvtheme[blue]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.81]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{10cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Eduardo}
+\familyname{Ballesteros}
+%\title{Software Test Developer}               % optional, remove the line if not wanted
+\address{Erbprinzen Str.}{75175 Pforzheim GERMANY}    % optional, remove the line if not wanted
+\mobile{00 49 (0) 176 3760 6564}
+\phone{00 34 646 09 22 94}                    % optional, remove the line if not wanted
+\email{eballes@gmail.com}                      % optional, remove the line if not wanted
+
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Education}
+%\cventry{2002--2008}{Computer Science Engineer (MSc)}{Universidad Polit\'ecnica de Madrid}{Spain} {}{}
+\cventry{2002--2008}{Computer Science Engineer (MSc)}{Technical University of Madrid (UPM)}{Spain} {}{}
+\cventry{2007--2008}{Computer Science}{University of Glasgow}{Scotland}{(Exchange student - Erasmus)}{}  % arguments 3 to 6 are optionals
+
+\section{Experience}
+\cventry{Aug'10--Present}{Validation Test Engineer}{Thales Alenia Space Deutschland}{Pforzheim}{Germany}{Working on behalf of GMV as OSPF element specialist and consultant}
+\cvlistitem{1}
+\cvlistitem{2}
+\cvlistitem{3}
+\cventry{Jan'09--Aug'10}{Software Developer}{GMV Aerospace}{Madrid}{Spain}{}
+\cvlistitem{Lead the design and development of our unattended OSPF test automation framework.}
+\cvlistitem{Developed an environment simulator to test the algorithm facility of OSPF in an isolated environment.}
+\cvlistitem{Designed and implemented the Software Integration Plan of the OSPF-RTMC subcomponent.}
+\cvlistitem{Implemented test data analysis for the Analysis Tool to verify algorithm results.}
+\cvlistitem{Analyzed execution problems and collaborated closely with the development team to correct software bugs.}
+\cvlistitem{Selected to teach a 3h Perl course to fellow co-workers focused on best practices, Perl idioms and code maintainability.}
+
+\cventry{Jul'08-Jan'09\\Sept'06-Sept'07}{Intern at Teldat}{Technical University of Madrid (UPM)}{Spain}{}{}
+\cvlistitem{Ported the Java desktop client application to manage the system to a web application using GWT.}
+\cvlistitem{Participated in a full development cycle experience, using SCRUM as management methodology, for the development of a image capture and distributed communications software system.}
+\cvlistitem{Updated the software and system's database access for a more efficient approach through nested database procedures.}
+\cvlistitem{Lead the migration of the error-prone date and time management system to a more maintainable interface using the Joda-Time library.}
+
+\section{Language skills}
+\cvcomputer{English}{Fluent}{Spanish}{Native}
+%\cvlanguage{English}{Fluent}{}
+%\cvlanguage{Spanish}{Native}{}
+
+\section{Computer skills}
+\cvcomputer{Languages}{\textbf{Perl}, \textbf{C}, Java, C++, Ada, Haskell}{Tools}{VCS, CPAN, Valgrind, vim}
+\cvcomputer{Others}{MySQL, PL/SQL, Hibernate, \LaTeX, Linux, LynxOS}{}{}
+\end{document}
