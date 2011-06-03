@@ -19,6 +19,6 @@ rm_aux:
 	@rm *.aux *.log *.out
 
 clean:
-	@rm -f *.aux *.dvi *.log *.out *.pdf
+	@rm -f *.aux *.dvi *.log *.out *.pdf *.bak
 	@echo "Cleaning... done!";
 
