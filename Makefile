@@ -15,7 +15,7 @@ pdf: *.tex
 	@$(foreach var,$(TEX_FILES),pdflatex -interaction=nonstopmode '$(var)' 1>/dev/null;)
 
 rm_aux:
-	@echo "Removing auxiliar files..."
+	@echo "Removing unneeded files..."
 	@rm *.aux *.log *.out
 
 clean:
