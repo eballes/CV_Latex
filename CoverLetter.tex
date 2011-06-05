@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper,twoside]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{coverletter} 
+
+% character encoding
+\usepackage[utf8]{inputenc}     % replace by the encoding you are using
+\usepackage{hyperref}
+\usepackage{newcent}
+\usepackage{verbatim}
+\usepackage{setspace}
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Eduardo}
+\familyname{Ballesteros}
+\address{Erbprinzen Str.}{75175 Pforzheim GERMANY}    % optional, remove the line if not wanted
+\mobile{00 49 (0) 176 3760 6564}
+\email{eballes@gmail.com}   % optional, remove the line if not wanted
+
+\nopagenumbers{} % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% offer data
+\newcommand{\position}{Software Engineer for INTEGRAL} % position
+\newcommand{\company}{ESA/ESAC} % company
+%\newcommand{\pollo}{To Whom It May Concern} % Or dear Susi
+\newcommand{\pollo}{Dear Karina,}
+\newcommand{\companyAddress}{ }
+
+\onehalfspacing
+\setlength{\parindent}{0.7cm}
+\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
+
+\fontfamily{\familydefault}
+\selectfont
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+\noindent \today \\[1em]
+
+%\noindent \companyAddress \\[1em]
+
+\noindent \pollo
+
+I am writing to express my interest in the {\position} position at {\company}, 
+because I am passionate about the space sector and the software development
+process. As software engineer, I have worked in the space industry deepening
+my understanding in a broad range of roles and positions, from development 
+to test, managing requirements as well as performing integration tasks. 
+
+From my education I have learned to develop effective software, flexible and adaptable 
+and to be a goal-oriented engineer. My work experiences demostrate that I have a 
+well-rounded understanding of the challeges that are faced between different companies 
+and in multicultural teams inside the european space industry. I would bring
+to your team my enthusiasm for software quality and control, pragmatic problem
+solving skills and a drive to always produce the best quality of work for your
+company.
+
+I am enclosing my resume to provide you with better understanding
+of my experience. You will find that I am well suited for the position and
+will make a strong contribution to your company. Please contact me by email at
+\url{eballes@gmail.com} if you need any additional information. It would
+be my pleasure to meet with you soon. Until then, thank you for your time and
+consideration.\\[1.4ex]
+
+\noindent Sincerely yours,
+
+\noindent Eduardo Ballesteros\\[1.0ex]
+
+\noindent Enclosure: Resume
+\end{document}
