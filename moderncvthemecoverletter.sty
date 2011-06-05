@@ -10,13 +10,7 @@
 %                identification
 %-------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{moderncvthemecoverletter}[2008/06/17 v0.7 modern curriculum vitae style: casual]
-
-
-%-------------------------------------------------------------------------------
-%                required packages
-%-------------------------------------------------------------------------------
-
+\ProvidesPackage{moderncvthemecoverletter}[2011/06/07 v0.1 modern curriculum vitae style: coverletter]
 
 %-------------------------------------------------------------------------------
 %                package options
@@ -107,49 +101,14 @@
 % maketitle
 \renewcommand*{\maketitle}{%
   {%
-    \ifthenelse{\isundefined{\@photo}}%
-      {}%
-      {{\color{firstnamecolor}\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}%
     \hfill%
-%    \raggedleft{\firstnamestyle{\MakeLowercase{\@firstname}}\familynamestyle{\MakeLowercase{\@familyname}}}\\[-.35em]}%
-    %\raggedleft{\firstnamestyle{\@firstname}~\familynamestyle{\@familyname}}\\[-.35em]}%
     \raggedleft{\firstnamestyle{\@firstname}~\familynamestyle{\@familyname}}\\[.8em]%
     \addressfont\color{addresscolor}%
     \raggedleft{\addresssymbol\@addressstreet ~--~ \@addresscity}\\[.1em]
-    \raggedleft{\phonesymbol\@mobile~--~\emailsymbol\@email}\\[-.35em]}
+    \raggedleft{\phonesymbol\@mobile~--~\emailsymbol\@email}\\[-.35em]
+  }
   {\color{firstnamecolor}\rule{\textwidth}{.25ex}\\[2.5em]}%
-% optional quote
-  \ifthenelse{\isundefined{\@quote}}%
-    {}%
-    {\centering{\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}}\\[2.5em]}%
-  }%
-
-% cv footer
-\newif\if@firstfooterelement\@firstfooterelementtrue
-\providecommand*{\footersymbol}{}
-\renewcommand*{\footersymbol}{%
-  \if@firstfooterelement%
-  \else%
-    { ~~\color{footersymbolcolor}\textbullet~~~}\fi}
-\providecommand*{\makefooter}{}
-\renewcommand*{\makefooter}{%
-  \fancypagestyle{plain}{%
-    \fancyfoot[c]{%
-      \parbox{0.8\textwidth}{%
-      \centering%
-      \addressfont\color{addresscolor}%
-      \ifthenelse{\isundefined{\@addressstreet}}{}{%
-        \addresssymbol~\@addressstreet%
-        \@firstfooterelementfalse%
-        \ifthenelse{\isundefined{\@addresscity}}{}{~--~\@addresscity}\\\@firstfooterelementtrue}%
-      \ifthenelse{\isundefined{\@mobile}}{}{\footersymbol\mobilesymbol~\@mobile\@firstfooterelementfalse}%
-      \ifthenelse{\isundefined{\@phone}}{}{\footersymbol\phonesymbol~\@phone\@firstfooterelementfalse}%
-      \ifthenelse{\isundefined{\@fax}}{}{\footersymbol\faxsymbol~\@fax\@firstfooterelementfalse}%
-      \ifthenelse{\isundefined{\@email}}{}{\footersymbol\emailsymbol~\emaillink{\@email}\@firstfooterelementfalse}%
-      \ifthenelse{\isundefined{\@extrainfo}}{}{\footersymbol\@extrainfo\@firstfooterelementfalse}}}%
-  }%
-  \pagestyle{plain}}
-\AtBeginDocument{\makefooter}
+}%
 
 
 \endinput
